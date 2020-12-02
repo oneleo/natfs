@@ -3,6 +3,7 @@
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 netsh advfirewall firewall add rule name="Port 80" dir=in action=allow protocol=TCP localport=80
 netsh advfirewall firewall add rule name="Port 81" dir=in action=allow protocol=TCP localport=81
+netsh advfirewall firewall add rule name="Port 82" dir=in action=allow protocol=TCP localport=82
 choco install git.install dontsleep.install golang -y
 ::refreshenv
 md %USERPROFILE%\go\src\github.com\codeskyblue
@@ -17,4 +18,5 @@ cd /d %USERPROFILE%\go\src\github.com\codeskyblue\gohttpserver
 copy "%USERPROFILE%\go\src\github.com\oneleo\silentfs\invisible.vbs" "%USERPROFILE%\go\bin\"
 "%windir%\System32\wscript.exe" "%USERPROFILE%\go\bin\invisible.vbs" "%USERPROFILE%\go\bin\gohttpserver" --port 80 -r "D:"
 "%windir%\System32\wscript.exe" "%USERPROFILE%\go\bin\invisible.vbs" "%USERPROFILE%\go\bin\gohttpserver" --port 81 -r "C:"
+"%windir%\System32\wscript.exe" "%USERPROFILE%\go\bin\invisible.vbs" "%USERPROFILE%\go\bin\gohttpserver" --port 82 -r "E:"
 ::pause
