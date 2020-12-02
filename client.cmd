@@ -7,4 +7,4 @@ choco install googlechrome chrome-remote-desktop-host google-drive-file-stream d
 ::"%ProgramFiles%\Google\Chrome\Application\chrome.exe" --new-window --incognito --app="https://remotedesktop.google.com/access"
 "%ProgramFiles%\Google\Chrome\Application\chrome.exe" "https://remotedesktop.google.com/access"
 "%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe" "https://remotedesktop.google.com/access"
-pause
+::pause
