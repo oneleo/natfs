@@ -4,11 +4,11 @@
 ## Require
 - None
 - Only for Windows OS
-- Just modify the `root` directory of file server at [fs.cmd](./fs.cmd) file, default setting is `C:\` listening on port `81` and `D:\` listening on port `80`
+- Just only modify the `root` directory at [silentfs.cmd](./silentfs.cmd) file, default setting is `C:\` listening on port `81` and `D:\` listening on port `80`
 
 ## Installation
 ```ps
 > :: Run the script as administrator through CMD.exe
 > cmd
-> fs.cmd
+> silentfs.cmd
 ```
